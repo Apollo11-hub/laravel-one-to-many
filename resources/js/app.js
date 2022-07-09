@@ -30,3 +30,20 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
 });
+
+
+$().ready(function(){
+
+
+
+    $('form').submit(function(event){
+        $('#error-title').hide();
+        if($('#title').val().length === 0){
+            $('#error-title').show('slow').text('il titolo è obbligatorio').fadeOut(5000)
+        }
+
+        event.preventDefault();
+
+    })
+
+});

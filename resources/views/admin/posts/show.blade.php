@@ -8,6 +8,11 @@
         <div class="card-body">
 
             <h5 class="card-title">{{$post->title}}</h5>
+            @if ($post->category)
+
+            <h6 class="card-title">{{$post->category->name}}</h6>
+
+            @endif
 
             <p class="card-text">{{$post->contenet}}</p>
 
