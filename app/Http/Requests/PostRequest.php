@@ -25,7 +25,6 @@ class PostRequest extends FormRequest
     {
         return [
             'title'=> 'required|max:255|min:3',
-            'category_id' => 'required',
             'contenet'=> 'required|min:4'
         ];
     }
@@ -36,7 +35,6 @@ class PostRequest extends FormRequest
             'title.required' => 'Il Titolo è obbligatorio',
             'title.min' => 'La lunghezza del Titolo deve essere di :min',
             'title.max' => 'La lunghezza del Titolo deve essere di :max',
-            'category_id.required' => 'La Categoria è obbligatoria',
             'contenet.required' => 'Il contenuto è obbligatorio',
             'contenet.min' => 'La lunghezza del contenuto deve essere di :min'
         ];
